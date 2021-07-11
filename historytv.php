@@ -6,7 +6,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $reponse = array();
     $user = $_POST['user'];
 
-    $sql = "select * from tv where user like '$user' limit 1";
+    $sql = "select * from tv where user like '$user' order by id desc limit 1";
 
     $result = mysqli_fetch_array(mysqli_query($con, $sql));
 
